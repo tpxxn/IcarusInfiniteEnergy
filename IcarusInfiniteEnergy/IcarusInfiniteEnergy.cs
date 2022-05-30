@@ -23,8 +23,7 @@ namespace IcarusInfiniteEnergy
         {
             if (GameMain.data != null && GameMain.data.mainPlayer != null)
             {
-                GameMain.data.mainPlayer.mecha.coreEnergyCap = 1e8;
-                GameMain.data.mainPlayer.mecha.coreEnergy = 1e8;
+                GameMain.data.mainPlayer.mecha.coreEnergy = GameMain.data.mainPlayer.mecha.coreEnergyCap;
             }
         }
 
