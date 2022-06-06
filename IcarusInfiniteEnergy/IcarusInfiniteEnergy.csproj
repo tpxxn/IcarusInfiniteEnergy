@@ -79,6 +79,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DSPAutoSorter.cs" />
     <Compile Include="ReflectionUtil.cs" />
     <Compile Include="GodModeButton.cs" />
     <Compile Include="IcarusInfiniteEnergy.cs" />

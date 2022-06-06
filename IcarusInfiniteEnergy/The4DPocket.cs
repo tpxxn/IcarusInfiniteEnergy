@@ -95,7 +95,7 @@ namespace IcarusInfiniteEnergy
 
         void Start()
         {
-            HotKey = IcarusInfiniteEnergy.Instance.Config.Bind("config", "HotKey", KeyCode.End, "四次元口袋快捷键");
+            HotKey = IcarusInfiniteEnergy.Instance.Config.Bind("config", "HotKey", KeyCode.End, "4DPocket KeyCode");
             Init();
         }
 

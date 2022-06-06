@@ -13,6 +13,10 @@ namespace IcarusInfiniteEnergy
             BindingFlags flag = BindingFlags.Instance | BindingFlags.NonPublic;
             Type type = instance.GetType();
             FieldInfo field = type.GetField(fieldname, flag);
+            if (field.GetValue(instance) == null)
+            {
+                return default;
+            }
             return (T)field.GetValue(instance);
         }
 

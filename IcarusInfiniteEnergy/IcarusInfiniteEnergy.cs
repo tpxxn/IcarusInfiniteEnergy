@@ -48,6 +48,7 @@ namespace IcarusInfiniteEnergy
             GodModeButton.Awake();
             Harmony.CreateAndPatchAll(typeof(GodModeButton), null);
             var the4DPocket = new GameObject(typeof(The4DPocket).FullName).AddComponent<The4DPocket>();
+            var autoSorter = new GameObject(typeof(DSPAutoSorter).FullName).AddComponent<DSPAutoSorter>();
         }
 
         void Update()
@@ -84,6 +85,39 @@ namespace IcarusInfiniteEnergy
                 StorageComponent.staticLoaded = true;
             }
             return false;
+        }
+
+        /// <summary>
+        /// 整理所有箱子
+        /// </summary>
+        [HarmonyPostfix]
+        [HarmonyPatch(typeof(GameMain), "Begin")]
+
+        private static void GameMain_Begin()
+        {
+            logger.LogWarning("ArrivePlanet");
+            if (GameMain.instance != null && GameMain.data != null && GameMain.data.factories != null)
+            {
+                foreach (var planetFactory in GameMain.data.factories)
+                {
+                    if (planetFactory != null)
+                    {
+                        //logger.LogWarning("planetFactory.index = " + planetFactory.index);
+                        var factoryStorage = planetFactory.factoryStorage;
+                        if (factoryStorage.storagePool != null)
+                        {
+                            foreach (var storageComponent in factoryStorage.storagePool)
+                            {
+                                if (storageComponent != null)
+                                {
+                                    //logger.LogWarning("storageComponent.id = " + storageComponent.id);
+                                    storageComponent.Sort();
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
 
         /// <summary>
