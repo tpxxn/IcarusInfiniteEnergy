@@ -13,7 +13,7 @@ using UnityEngine.UI;
 namespace IcarusInfiniteEnergy
 {
     // [BepInDependency("me.xiaoye97.plugin.Dyson.LDBTool", BepInDependency.DependencyFlags.HardDependency)]
-    [BepInPlugin("tpxxn.plugin.Dyson.IcarusInfiniteEnergy", "IcarusInfiniteEnergy", "1.0")]
+    [BepInPlugin("tpxxn.plugin.Dyson.IcarusInfiniteEnergy", "IcarusInfiniteEnergy", "5.0")]
     public class IcarusInfiniteEnergy : BaseUnityPlugin
     {
         private static volatile IcarusInfiniteEnergy instance = null;

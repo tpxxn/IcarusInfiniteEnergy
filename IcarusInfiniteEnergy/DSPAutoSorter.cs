@@ -47,12 +47,12 @@ namespace IcarusInfiniteEnergy
             Logger = IcarusInfiniteEnergy.logger;
             Harmony.CreateAndPatchAll(Assembly.GetExecutingAssembly());
 
-            enableSortInInventry = IcarusInfiniteEnergy.Instance.Config.Bind("General", "enableSortInInventry", true, "enable sort in normal inventry.");
-            enableSortInStorage = IcarusInfiniteEnergy.Instance.Config.Bind("General", "enableSortInStorage", true, "enable sort in storages.");
-            enableSortInFuelChamber = IcarusInfiniteEnergy.Instance.Config.Bind("General", "enableSortInFuelChamber", true, "enable sort in Mecha fuelchamber.");
-            enableSortInMiner = IcarusInfiniteEnergy.Instance.Config.Bind("General", "enableSortInMiner", true, "enable sort in inventry of miner.");
-            enableSortInAssembler = IcarusInfiniteEnergy.Instance.Config.Bind("General", "enableSortInAssembler", true, "enable sort in inventry of Assemblers or smelter.");
-            enableForcedSort = IcarusInfiniteEnergy.Instance.Config.Bind("ForcedSort", "enableForcedSort", true, "enable forced sort.");
+            enableSortInInventry = IcarusInfiniteEnergy.Instance.Config.Bind("AutoSorter General", "enableSortInInventry", true, "enable sort in normal inventry.");
+            enableSortInStorage = IcarusInfiniteEnergy.Instance.Config.Bind("AutoSorter General", "enableSortInStorage", true, "enable sort in storages.");
+            enableSortInFuelChamber = IcarusInfiniteEnergy.Instance.Config.Bind("AutoSorter General", "enableSortInFuelChamber", true, "enable sort in Mecha fuelchamber.");
+            enableSortInMiner = IcarusInfiniteEnergy.Instance.Config.Bind("AutoSorter General", "enableSortInMiner", true, "enable sort in inventry of miner.");
+            enableSortInAssembler = IcarusInfiniteEnergy.Instance.Config.Bind("AutoSorter General", "enableSortInAssembler", true, "enable sort in inventry of Assemblers or smelter.");
+            enableForcedSort = IcarusInfiniteEnergy.Instance.Config.Bind("AutoSorter ForcedSort", "enableForcedSort", true, "enable forced sort.");
 
             // Sprite[] sprites = (Sprite[])Resources.LoadAll<Sprite>("");
             //      //LogManager.Logger.LogInfo("----------------------------------------icon load");
